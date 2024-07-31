@@ -36,7 +36,7 @@ cd
 cd ..
 ```
 
-# Getting Help through Command Line
+## Getting Help through Command Line
 **8: Get help on given Command line(ls or other commands)**
 
 ```bash
@@ -52,7 +52,7 @@ info ls
 ```bash
 ls --help
 ```
-# Command Line Arguments & Options
+## Command Line Arguments & Options
 **11: Using short format(-al) for command**
 
 ```bash
@@ -85,7 +85,7 @@ ls -I "file_name*"
 ls --ignore="file_name*"
 ```
 
-# Looking more Files using cat Command
+## Looking more Files using cat Command
 
 **17: Prints the file and also concatenates the file**
 
@@ -125,7 +125,7 @@ cat > new-file.txt
 
 
 # b) Files and the Filesystem
-# File System Hiererchy & Device Partitions and Mounting
+## File System Hiererchy & Device Partitions and Mounting
 **1: Shows how file System Hiererchy/distribution organized**
 
 ```bash
@@ -152,14 +152,14 @@ mount
 du -sh ~
 ```
 
-# Absolute & Relative Paths 
+## Absolute & Relative Paths 
 
 **6: Absolute path >>> All derectories are shown**
 
 **7: Relative Path 	>>> All dir must not shown**
 
 
-# Working with Files & Directories
+## Working with Files & Directories
 
 **8: Shows Last modification Time of files**
 
@@ -212,7 +212,7 @@ rmdir  non-empty-dir/
 rm -rf non-empty-dir/
 ```
 
-# Spaces in File and Directory Names 
+## Spaces in File and Directory Names 
 **It is not Recommended to keep Space in "File Name" or "Folder/Dir Name"**
 
 **18: Use " \ " for avoiding space problems**
@@ -228,7 +228,7 @@ cat 'file name.txt'
 cat "file name.txt"
 ```
 
-# File & Path Expansion(Finding nearly same files)
+## File & Path Expansion(Finding nearly same files)
 
 **21: Finding nearly same files**
 ```bash
@@ -255,7 +255,7 @@ ls **/file[1-3].txt
 ls **/file[a-zA-Z0-9].txt
 ```
 
-# More commands in Fils(head, tail & diff Commands)
+## More commands in Fils(head, tail & diff Commands)
 
 **27: Display first 10 lines of files**
 ```bash
