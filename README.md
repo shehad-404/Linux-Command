@@ -215,7 +215,7 @@ rm -rf non-empty-dir/
 # Spaces in File and Directory Names 
 **It is not Recommended to keep Space in "File Name" or "Folder/Dir Name"**
 
-**18: Use "\" for avoiding space problems**
+**18: Use " \ " for avoiding space problems**
 ```bash
 cat file\ name.txt
 ```
