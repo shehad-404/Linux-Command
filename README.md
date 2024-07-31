@@ -154,30 +154,62 @@ du -sh ~
 
 # Absolute & Relative Paths 
 
-**6: Shows how file System Hiererchy/distribution organized**
+**6: Absolute path >>> All derectories are shown**
+
+**7: Relative Path 	>>> All dir must not shown**
+
+
+# Working with Files & Directories
+
+**8: Shows Last modification Time of files**
 
 ```bash
-man hier
+ls -l file_name.txt 
 ```
-**7: Shows how file System Hiererchy/distribution organized**
+**9: Update the modification Time and Execute (if file doesn't exist then it'll Create the file)**
 
 ```bash
-man hier
+touch file_name
 ```
-**8: Shows how file System Hiererchy/distribution organized**
+**10: Copy files/directories Source to Destination**
 
 ```bash
-man hier
+cp source_file destination_file
 ```
-**9: Shows how file System Hiererchy/distribution organized**
+**11: Move or Rename files Source to Destination**
 
 ```bash
-man hier
+mv source_file destination_file
 ```
-**10: Shows how file System Hiererchy/distribution organized**
+**12: Using mv Rename folders Source to Destination**
 
 ```bash
-man hier
+mv old_folder new_folder
+```
+**13: Remove files**
+
+```bash
+rm file_name.txt
+```
+**14: Make directory**
+
+```bash
+mkdir  dir_name
+```
+**15: Remove directory**
+
+```bash
+rmdir  dir_name
+```
+**16: Remove non-empty directory**
+
+```bash
+rmdir  non-empty-dir/
+```
+**17: Recursilvely Delete all contents of directory**
+
+```bash
+rm -rf non-empty-dir/
 ```
 
-File System Hiererchy & Device Partitions and Mounting
+# Spaces in File and Directory Names 
