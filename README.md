@@ -125,9 +125,59 @@ cat > new-file.txt
 
 
 # b) Files and the Filesystem
-
+# File System Hiererchy & Device Partitions and Mounting
 **1: Shows how file System Hiererchy/distribution organized**
 
 ```bash
 man hier
 ```
+**2: Shows how deivice Partitions are mounted can be found**
+
+```bash
+less /etc/fstab
+```
+**3: Mount command points diiferent mount partitions**
+
+```bash
+mount 
+```
+**4: Show disc Size human redable(Giga-bite formate)**
+
+```bash
+ df -h
+```
+**5: Size of Home Directory**
+
+```bash
+du -sh ~
+```
+
+# Absolute & Relative Paths 
+
+**6: Shows how file System Hiererchy/distribution organized**
+
+```bash
+man hier
+```
+**7: Shows how file System Hiererchy/distribution organized**
+
+```bash
+man hier
+```
+**8: Shows how file System Hiererchy/distribution organized**
+
+```bash
+man hier
+```
+**9: Shows how file System Hiererchy/distribution organized**
+
+```bash
+man hier
+```
+**10: Shows how file System Hiererchy/distribution organized**
+
+```bash
+man hier
+```
+
+File System Hiererchy & Device Partitions and Mounting
