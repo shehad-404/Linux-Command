@@ -37,12 +37,12 @@ cd ..
 ```
 
 # Getting Help through Command Line
-**8: Get help on given Command line(ls)**
+**8: Get help on given Command line(ls or other commands)**
 
 ```bash
 man ls
 ```
-**9: Shows the infirmation of given Command line**
+**9: Shows the infirmation of given Command line(ls)**
 
 ```bash
 info ls
@@ -52,12 +52,73 @@ info ls
 ```bash
 ls --help
 ```
-
-
-**1: Clear all commands in Console**
+# Command Line Arguments & Options
+**11: Using short format(-al) for command**
 
 ```bash
-clear
+ls -al
 ```
 
+**12: Using extended format(--all) for command**
 
+```bash
+ls --all -l 
+```
+**13: Shows/prints the text file**
+
+```bash
+more file_name.txt
+```
+**14: Shows the less lines in the text file**
+
+```bash
+less file_name.txt
+```
+**15: Ignoring the files**
+
+```bash
+ls -I "file_name*" 
+```
+**16: Ignoring the files**
+
+```bash
+ls --ignore="file_name*"
+```
+
+# Looking more Files using cat Command
+
+**17: Prints the file and also concatenates the file**
+
+```bash
+cat file_name.txt
+```
+**18: 1st Print the "file.txt" and then Print "File2.txt"**
+
+```bash
+cat file.txt file2.txt
+```
+**19: 1st Print the "file2.txt" and then Print "File.txt"**
+
+```bash
+cat file2.txt file.txt
+```
+**20: Numbering all non-empty lines**
+
+```bash
+cat -b file.txt file2.txt
+```
+**21: Numbering all the Lines**
+
+```bash
+cat -n file.txt file2.txt
+```
+**22: Combine two files and give a file name(Combine.txt)**
+
+```bash
+cat file1.txt file2.txt > combine.txt 
+```
+**23: Creating file and Writing the file**
+
+```bash
+cat > new-file.txt 
+```
