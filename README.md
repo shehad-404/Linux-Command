@@ -92,12 +92,12 @@ ls --ignore="file_name*"
 ```bash
 cat file_name.txt
 ```
-**18: 1st Print the "file.txt" and then Print "File2.txt"**
+**18: Firstly Print the "file.txt" and then Print "File2.txt"**
 
 ```bash
 cat file.txt file2.txt
 ```
-**19: 1st Print the "file2.txt" and then Print "File.txt"**
+**19: Firstly Print the "file2.txt" and then Print "File.txt"**
 
 ```bash
 cat file2.txt file.txt
@@ -112,7 +112,7 @@ cat -b file.txt file2.txt
 ```bash
 cat -n file.txt file2.txt
 ```
-**22: Combine two files and give a file name(Combine.txt)**
+**22: Combine two files and give a file name(combine.txt)**
 
 ```bash
 cat file1.txt file2.txt > combine.txt 
