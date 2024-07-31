@@ -255,7 +255,7 @@ ls **/file[1-3].txt
 ls **/file[a-zA-Z0-9].txt
 ```
 
-## More commands in Fils(head, tail & diff Commands)
+## More commands in Files(head, tail & diff Commands)
 
 **27: Display first 10 lines of files**
 ```bash
