@@ -122,3 +122,12 @@ cat file1.txt file2.txt > combine.txt
 ```bash
 cat > new-file.txt 
 ```
+
+
+# b) Files and the Filesystem
+
+**1: Shows how file System Hiererchy/distribution organized**
+
+```bash
+man hier
+```
