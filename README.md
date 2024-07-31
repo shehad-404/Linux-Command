@@ -227,3 +227,62 @@ cat 'file name.txt'
 ```bash
 cat "file name.txt"
 ```
+
+# File & Path Expansion(Finding nearly same files)
+
+**21: Finding nearly same files**
+```bash
+ls file*.txt
+```
+**22: Finding nearly same files**
+```bash
+ls file?.txt
+```
+**23: Finding nearly same files in defferent Folders**
+```bash
+ls **/*.txt	
+```
+**24: Finding nearly same files(file1, file2, file3) in defferent Folders(**)**
+```bash
+ls **/file[123].txt	
+```
+**25: Finding nearly same files(file1, file2, file3) in defferent Folders(**)**
+```bash
+ls **/file[1-3].txt
+```
+**26: Finding nearly same files in defferent Folders**
+```bash
+ls **/file[a-zA-Z0-9].txt
+```
+
+# More commands in Fils(head, tail & diff Commands)
+
+**27: Display first 10 lines of files**
+```bash
+head file.txt
+```
+**28: Display first 5 lines**
+```bash
+head -n 5 file.txt
+```
+**29: Display first 5 lines**
+```bash
+head -5 file.txt
+```
+**30: Display last 10 lines**
+```bash
+tail file.txt
+```
+**31: Display last 5 lines**
+```bash
+tail -5 file.txt
+```
+**32: Gives temporarly Administritive priviliges**
+```bash
+tail -f /var/log/auth.log
+```
+**33: Difference between two files line by line**
+```bash
+diff file1.txt file2.txt
+```
+
