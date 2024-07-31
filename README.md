@@ -10,7 +10,7 @@ clear
 ```bash
 whoami
 ```
-**3: returns host name**
+**3: Returns host name**
 
 ```bash
 hostname
@@ -20,36 +20,40 @@ hostname
 ```bash
 pwd
 ```
-**5: List directory contents**
+**5: Shows the list of directory contents**
 
 ```bash
 ls
 ```
-**1: Clear all commands in Console**
+**6: Change directory**
 
 ```bash
-clear
+cd
 ```
-**1: Clear all commands in Console**
+**7: Go back to current directory**
 
 ```bash
-clear
+cd ..
 ```
-**1: Clear all commands in Console**
+
+# Getting Help through Command Line
+**8: Get help on given Command line(ls)**
 
 ```bash
-clear
+man ls
 ```
-**1: Clear all commands in Console**
+**9: Shows the infirmation of given Command line**
 
 ```bash
-clear
+info ls
 ```
-**1: Clear all commands in Console**
+**10: Get help on Command line**
 
 ```bash
-clear
+ls --help
 ```
+
+
 **1: Clear all commands in Console**
 
 ```bash
