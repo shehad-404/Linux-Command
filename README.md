@@ -286,3 +286,21 @@ tail -f /var/log/auth.log
 diff file1.txt file2.txt
 ```
 
+## Hard and Soft FileSystem Links
+
+**34: Create a Hard link named hello-hard-link.txt from hello.txt**
+```bash
+ln hello.txt hello-hard-link.txt
+```
+**35: Edit the files using vim Editor (back to shell using Alt+: then Shift+: then press w+q)**
+```bash
+vim hello.txt 
+```
+**36: After deleting the Original file(hello.txt) we can Retrive again through hard-link file**
+```bash
+ln hello-hard-link.txt  hello.txt
+```
+**37: Create a Soft Link named hello-soft-link.txt from hello.txt file(After deleting the original file can't be retrieve)**
+```bash
+ln -s ./hello.txt hello-soft-link.txt
+```
