@@ -288,7 +288,7 @@ diff file1.txt file2.txt
 
 ## Hard and Soft FileSystem Links
 
-**34: Create a Hard link named hello-hard-link.txt from hello.txt**
+**34: Create a Hard link named hello-hard-link.txt from the Original file hello.txt**
 ```bash
 ln hello.txt hello-hard-link.txt
 ```
@@ -326,4 +326,31 @@ unzip -l zip_dir_name.zip
 **42: Recursively added Files for Compressing(Zip) the Folders/Directories**
 ```bash
 zip -r zip_dir_name.zip dir1 dir2 dir3
+```
+
+## Searching in the File System(find, locate, which, whichis Commands)
+
+**43: Search for files in a directory hierarchy**
+```bash
+find . -name 'file*.txt'
+```
+**44: Insensitive Search for files in a directory hierarchy**
+```bash
+find . -iname 'file*.txt'
+```
+**45: Search all location for file.txt**
+```bash
+locate file.txt
+```
+**46: Find all files that match the pattern name "file"**
+```bash
+locate file*.txt
+```
+**47: Find the path of command(here "ls" is used) which is executed**
+```bash
+which ls
+```
+**48: Find the executable source code path for man pages utilities**
+```bash
+whereis ls 
 ```
