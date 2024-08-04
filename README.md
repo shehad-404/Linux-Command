@@ -304,3 +304,26 @@ ln hello-hard-link.txt  hello.txt
 ```bash
 ln -s ./hello.txt hello-soft-link.txt
 ```
+
+## Compressing(zip) and Archiving(unzip) files and folders
+
+**38: Compressing(Zip) the files**
+```bash
+zip zip_file_name.zip file1.txt file2.txt file3.txt
+```
+**39: Extracting(Unzip) the files**
+```bash
+unzip -l zip_file_name.zip	
+```
+**40: Compressing(Zip) the Folders/Directories [dir=directories]**
+```bash
+zip zip_dir_name.zip dir1 dir2 dir3
+```
+**41: Extracting(Unzip) the directory**
+```bash
+unzip -l zip_dir_name.zip	
+```
+**42: Recursively added Files for Compressing(Zip) the Folders/Directories**
+```bash
+zip -r zip_dir_name.zip dir1 dir2 dir3
+```
