@@ -1,4 +1,5 @@
 # Topics Covered:
+
 **a) Command line basics**
 **b) Files and the filesystem**
 **c) Users and groups**
