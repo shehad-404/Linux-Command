@@ -1,3 +1,17 @@
+# Topics Covered:
+**a) Command line basics**
+**b) Files and the filesystem**
+**c) Users and groups**
+**d) Installing software**
+**e) Shell basics**
+**f) Redirecting I/O**
+**g) Searching text**
+**h) Common utilities**
+**i) File editors**
+**j) Process management**
+**k) Regular Expressions**
+**l) Shell scripting**
+
 # a) Basic Command Lines
 
 **1: Clear all commands in Console**
