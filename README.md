@@ -369,3 +369,32 @@ which ls
 ```bash
 whereis ls 
 ```
+
+# c) Users and Groups
+
+**49: Shows Users of Linux Systems**
+```bash
+users
+```
+**50: Shows Details of Users**
+```bash
+who
+```
+**51: More information of users**
+```bash
+w
+```
+**52: Information about users and password**
+```bash
+less /etc/passwd
+```
+**53: Group information**
+```bash
+less /etc/group
+```
+**54: Shows different Users & Group**
+```bash
+ls -la /home	
+```
+
+## Change File & Directory Permissions(chmod, chown)
