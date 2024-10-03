@@ -550,3 +550,256 @@ sudo yum remove qpdf
 
 
 
+# e) Shell Basics 
+
+## Common Line Command Shells
+**1: Refers to the KornShell, a Unix shell developed by David Korn that offers backward compatibility with the Bourne shell (sh).**
+```
+ksh
+```
+**2: The C shell, a Unix shell created by Bill Joy that uses syntax similar to the C programming language.**
+```
+csh
+```
+**3: An enhanced version of the C shell (csh), with additional features like command-line editing and spell checking.**
+```
+tcsh
+```
+**4: Z shell, an advanced and feature-rich shell that is the default shell in Kali Linux.**
+```
+zsh
+```
+
+## Environment Varaibles >>>> (1) Local Varaible = Shell Variable	 (2) Global varaible = Environment Varaibale;
+**5: Displays all environment variables and their values in the current shell session.**
+```
+printenv
+```
+
+### Local Variable 
+**6: Creates a local variable COUNT_LOCAL and assigns it the value 42. It exists only in the current shell.**
+```
+COUNT_LOCAL=42
+```
+**7: Prints the value of the local variable COUNT_LOCAL to the terminal.**
+```
+echo $COUNT_LOCAL
+```
+**8: Launches a new subshell, which will not inherit local variables from the parent shell.**
+```
+bash
+```
+
+### Global Variable
+**9: Creates a global (environment) variable COUNT_GLOBAL with a value of 55. This variable will be available to all subshells.**
+```
+export COUNT_GLOBAL=55
+```
+**10: Displays the value of the global variable COUNT_GLOBAL.**
+```
+echo $COUNT_GLOBAL
+```
+**11: Opens a new subshell in which the global variable COUNT_GLOBAL will still be available.**
+```
+bash
+```
+**12: Removes the global variable COUNT_GLOBAL from the environment.**
+```
+unset COUNT_GLOBAL
+```
+
+### Startup Files >>> There are 3 types of Shells(non-login Shell is one of them)
+**13: Lists all files in the current directory, including hidden files, with detailed information like permissions, owner, and size.**
+```
+ls -al
+```
+**14: Opens the .bashrc file (a startup file for bash shells) in the nano text editor. This file contains configurations and aliases that run when a new bash session starts.**
+```
+nano .bashrc
+```
+
+#### Creating alias Command(works as a Keyboard Shortcut Command)
+**15: Displays all the currently defined aliases for the shell session.**
+```
+alias
+```
+**16: Creates an alias del for the command rm -rfi, which removes files or directories recursively with interactive prompts and force.**
+```
+alias del='rm -rfi'
+```
+**17: Creates an alias c for the clear command, which clears the terminal screen.**
+```
+alias c='clear'
+```
+**18: Reloads the .bashrc file in the current shell session so that the changes (like aliases) take effect immediately without opening a new terminal.**
+```
+source .bashrc
+```
+
+
+## Redirecting Input & Output
+**19: **
+```
+
+```
+**20: **
+```
+
+```
+**21: **
+```
+
+```
+**22: **
+```
+
+```
+**23: **
+```
+
+```
+**24: **
+```
+
+```
+**25: **
+```
+
+```
+**26: **
+```
+
+```
+**27: **
+```
+
+```
+**28: **
+```
+
+```
+**29: **
+```
+
+```
+**30: **
+```
+
+```
+**31: **
+```
+
+```
+**32: **
+```
+
+```
+**33: **
+```
+
+```
+**34: **
+```
+
+```
+**35: **
+```
+
+```
+**36: **
+```
+
+```
+**37: **
+```
+
+```
+**38: **
+```
+
+```
+**39: **
+```
+
+```
+**40: **
+```
+
+```
+**41: **
+```
+
+```
+**42: **
+```
+
+```
+**43: **
+```
+
+```
+**44: **
+```
+
+```
+**45: **
+```
+
+```
+**46: **
+```
+
+```
+**47: **
+```
+
+```
+**48: **
+```
+
+```
+**49: **
+```
+
+```
+**50: **
+```
+
+```
+**51: **
+```
+
+```
+**52: **
+```
+
+```
+**53: **
+```
+
+```
+**54: **
+```
+
+```
+**55: **
+```
+
+```
+**56: **
+```
+
+```
+**57: **
+```
+
+```
+**58: **
+```
+
+```
+
+
+
+
+
