@@ -472,7 +472,7 @@ sudo passwd sally
 ```
 
 # d) Installing Software
-## Package Management Debian System(dpkg)
+## Package Management: Debian System(dpkg)
 
 **1: Updates the package lists from the repositories to get information on the latest versions of packages.**
 ```bash
