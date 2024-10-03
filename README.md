@@ -637,7 +637,147 @@ source .bashrc
 ```
 
 
-## Redirecting Input & Output
+## Command History:
+**19: Displays the history of all executed commands in the shell.**
+```
+history
+```
+**20: Pipes the history command output to less for easier scrolling.**
+```
+history | less
+```
+**21: Re-executes the command numbered 191 from the command history.**
+```
+!191
+```
+**22: Re-executes the previous command from the history.**
+```
+!-1
+```
+**23: Executes the last command entered.**
+```
+!!
+```
+**24: Also can change history command using UP(↑) or Down(↧) Arrow**
+```
+
+```
+**25: Re-executes the last command that starts with cat.**
+```
+!cat
+```
+**26: Replaces file1.txt with fileA.txt in the previous command and re-executes it.**
+```
+^file1.txt^fileA.txt^
+```
+**27: Displays the last few commands from the command history.**
+```
+history | tail
+```
+**28: Displays the contents of the .bashrc file in the less viewer.**
+```
+less .bashrc
+```
+
+## Command Substituition 
+**29: Displays the contents of the file file-list.txt.**
+```
+cat file-list.txt
+```
+**30: Sends the contents of file-list.txt to ls -l, though this is not a common or useful combination.**
+```
+cat file-list.txt | ls -l
+```
+**31: Uses file-list.txt as input to the ls -l command (though this doesn’t typically make sense with ls).**
+```
+ls -l < file-list.txt
+```
+**32: Executes the cat file-list.txt command first, then uses its output as arguments to |s -|**
+```
+ls -l `cat file-list.txt`
+```
+**33: Similar to the previous command but uses $(...) instead of backticks for command substitution.**
+```
+ls -l $(cat file-list.txt)
+```
+
+
+
+
+
+# f) Redirecting Input & Output
+**1: **
+```
+
+```
+**2: **
+```
+
+```
+**3: **
+```
+
+```
+**4: **
+```
+
+```
+**5: **
+```
+
+```
+**6: **
+```
+
+```
+**7: **
+```
+
+```
+**8: **
+```
+
+```
+**9: **
+```
+
+```
+**10: **
+```
+
+```
+**11: **
+```
+
+```
+**12: **
+```
+
+```
+**13: **
+```
+
+```
+**14: **
+```
+
+```
+**15: **
+```
+
+```
+**16: **
+```
+
+```
+**17: **
+```
+
+```
+**18: **
+```
+
+```
 **19: **
 ```
 
@@ -650,10 +790,6 @@ source .bashrc
 ```
 
 ```
-**22: **
-```
-
-```
 **23: **
 ```
 
@@ -662,139 +798,11 @@ source .bashrc
 ```
 
 ```
-**25: **
-```
-
-```
 **26: **
 ```
 
 ```
 **27: **
-```
-
-```
-**28: **
-```
-
-```
-**29: **
-```
-
-```
-**30: **
-```
-
-```
-**31: **
-```
-
-```
-**32: **
-```
-
-```
-**33: **
-```
-
-```
-**34: **
-```
-
-```
-**35: **
-```
-
-```
-**36: **
-```
-
-```
-**37: **
-```
-
-```
-**38: **
-```
-
-```
-**39: **
-```
-
-```
-**40: **
-```
-
-```
-**41: **
-```
-
-```
-**42: **
-```
-
-```
-**43: **
-```
-
-```
-**44: **
-```
-
-```
-**45: **
-```
-
-```
-**46: **
-```
-
-```
-**47: **
-```
-
-```
-**48: **
-```
-
-```
-**49: **
-```
-
-```
-**50: **
-```
-
-```
-**51: **
-```
-
-```
-**52: **
-```
-
-```
-**53: **
-```
-
-```
-**54: **
-```
-
-```
-**55: **
-```
-
-```
-**56: **
-```
-
-```
-**57: **
-```
-
-```
-**58: **
 ```
 
 ```
