@@ -1,19 +1,19 @@
 # Topics Covered:
 
-**a) Basic Command lines**
-**b) Files and the Filesystem**
-**c) Users and Groups**
-**d) Installing Software**
-**e) Shell Basics**
-**f) Redirecting I/O**
-**g) Searching & Processing Texts**
-**h) Common Utilities**
-**i) File Editors**
-**j) Process Management**
-**k) Regular Expressions**
-**l) Shell Scripting**
+**A) Basic Command lines**
+**B) Files and the Filesystem**
+**C) Users and Groups**
+**D) Installing Software**
+**E) Shell Basics**
+**F) Redirecting I/O**
+**G) Searching & Processing Texts**
+**H) Common Utilities**
+**I) File Editors**
+**J) Process Management**
+**K) Regular Expressions**
+**L) Shell Scripting**
 
-# a) Basic Command Lines
+# A) Basic Command Lines
 
 **1: Clear all commands in Console**
 
@@ -139,7 +139,7 @@ cat > new-file.txt
 ```
 
 
-# b) Files and the Filesystem
+# B) Files and the Filesystem
 ## File System Hiererchy & Device Partitions and Mounting
 **1: Shows how file System Hiererchy/distribution organized**
 
@@ -370,7 +370,7 @@ which ls
 whereis ls 
 ```
 
-# c) Users and Groups
+# C) Users and Groups
 
 **1: Shows Users of Linux Systems**
 ```bash
@@ -471,7 +471,7 @@ passwd
 sudo passwd sally
 ```
 
-# d) Installing Software
+# D) Installing Software
 ## Package Management: Debian System(dpkg)
 
 **1: Updates the package lists from the repositories to get information on the latest versions of packages.**
@@ -550,7 +550,7 @@ sudo yum remove qpdf
 
 
 
-# e) Shell Basics 
+# E) Shell Basics 
 
 ## Common Line Command Shells
 **1: Refers to the KornShell, a Unix shell developed by David Korn that offers backward compatibility with the Bourne shell (sh).**
@@ -705,7 +705,7 @@ ls -l $(cat file-list.txt)
 
 
 
-# f) Redirecting Input & Output
+# F) Redirecting Input & Output
 **1: **
 ```
 
@@ -809,7 +809,7 @@ ls -l $(cat file-list.txt)
 
 
 
-# g) Searching & Processing Texts >>>> grep, egrep, fgrep, rgrep >>>> print lines that match patterns (grep >>>> searches  for  PATTERNS in each FILE, wc = Word Count, -v = omitting the words without specific letters )
+# G) Searching & Processing Texts >>>> grep, egrep, fgrep, rgrep >>>> print lines that match patterns (grep >>>> searches  for  PATTERNS in each FILE, wc = Word Count, -v = omitting the words without specific letters )
 
 **1: **
 ```
@@ -1026,7 +1026,7 @@ ls -l $(cat file-list.txt)
 
 
 
-# h) More Utilities (Networking + File Transfer)
+# H) More Utilities (Networking + File Transfer)
 **1: **
 ```
 
@@ -1190,7 +1190,7 @@ ls -l $(cat file-list.txt)
 
 
 
-# i) File Editors 
+# I) File Editors 
 
 **1: **
 ```
@@ -1205,7 +1205,7 @@ ls -l $(cat file-list.txt)
 
 ```
 
-# j) Process Management 
+# J) Process Management 
 
 **1: **
 ```
@@ -1368,7 +1368,7 @@ ls -l $(cat file-list.txt)
 
 ```
 
-# k) Regular Expression 
+# K) Regular Expression 
 **1: **
 ```
 
@@ -1391,3 +1391,167 @@ ls -l $(cat file-list.txt)
 ```
 
 
+
+
+# L) Shell Scripting 
+
+**1: **
+```
+
+```
+**2: **
+```
+
+```
+**3: **
+```
+
+```
+**4: **
+```
+
+```
+**5: **
+```
+
+```
+**6: **
+```
+
+```
+**7: **
+```
+
+```
+**8: **
+```
+
+```
+**9: **
+```
+
+```
+**10: **
+```
+
+```
+**11: **
+```
+
+```
+**12: **
+```
+
+```
+**13: **
+```
+
+```
+**14: **
+```
+
+```
+**15: **
+```
+
+```
+**16: **
+```
+
+```
+**17: **
+```
+
+```
+**18: **
+```
+
+```
+**19: **
+```
+
+```
+**20: **
+```
+
+```
+**21: **
+```
+
+```
+**22: **
+```
+
+```
+**23: **
+```
+
+```
+**24: **
+```
+
+```
+**25: **
+```
+
+```
+**26: **
+```
+
+```
+**27: **
+```
+
+```
+**28: **
+```
+
+```
+**29: **
+```
+
+```
+**30: **
+```
+
+```
+**31: **
+```
+
+```
+**32: **
+```
+
+```
+**33: **
+```
+
+```
+**34: **
+```
+
+```
+**35: **
+```
+
+```
+**36: **
+```
+
+```
+**37: **
+```
+
+```
+**38: **
+```
+
+```
+**39: **
+```
+
+```
+**40: **
+```
+
+```
