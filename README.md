@@ -813,66 +813,70 @@ find / -name 'sample.txt' |& less
 
 # G) Searching & Processing Texts >>>> grep, egrep, fgrep, rgrep >>>> print lines that match patterns (grep >>>> searches  for  PATTERNS in each FILE, wc = Word Count, -v = omitting the words without specific letters )
 
-**1: **
+**1: Search Pattern "shehad" in the file**
+```
+grep shehad word-list.txt
+```
+**2: search word does not have "e" letters**
+```
+grep -v e word-list.txt | less
+```
+**3: search "error" patterns in files**
+```
+grep error /var/log/*.log
+```
+**4: search error separate with matching goups in patterns with "error"**
+```
+grep error -B 3 -A 2 /var/log/*.log
+```
+**5: Sorting the word Alphabetically Ascending order in the file**
+```
+sort word-list.txt
+```
+**6: Sorting the word Alphabetically Ascending order in the file (Same works as number "5" command)**
+```
+cat word-list.txt | sort
+```
+**7: Sorting the numbers Descending Order**
+```
+sort -nr random-numbers.txt
+```
+**8: Sorting the numbers Descending Order  (Same works as number "7" command)**
+```
+cat random-numbers.txt | sort -nr
+```
+**9: Filter(Omit) adjacent matching lines**
+```
+uniq word-list.txt
+```
+**10: Both Sorted lines & Omit adjacen matching lines**
+```
+sort word-list.txt | uniq
+```
+**11: Count Number of Words, Lines in Bytes**
+```
+wc word-list.txt
+```
+**12: Count num of Words "Shehad" in the file**
+```
+grep Shehad word-list.txt | wc -l
+```
+**13: Sorted the words without letters "e"**
+```
+grep -v e word-list.txt | sort
+```
+**14: Sorted the words Uniquely without letters "e"**
+```
+grep -v e word-list.txt | sort | uniq
+```
+**15: Number of Words by Sorting the words Uniquely without letters "e"**
+```
+grep -v e word-list.txt | sort | uniq | wc -l
 ```
 
-```
-**2: **
-```
 
-```
-**3: **
-```
-
-```
-**4: **
-```
-
-```
-**5: **
-```
-
-```
-**6: **
-```
-
-```
-**7: **
-```
-
-```
-**8: **
-```
-
-```
-**9: **
-```
-
-```
-**10: **
-```
-
-```
-**11: **
-```
-
-```
-**12: **
-```
-
-```
-**13: **
-```
-
-```
-**14: **
-```
-
-```
-**15: **
-```
-
-```
+## Manipulating the Texts 
+## sed = stream editor for filtering and transforming text >>>> Substitute or Delete the words
 **16: **
 ```
 
@@ -953,6 +957,7 @@ find / -name 'sample.txt' |& less
 ```
 
 ```
+## Converting Text Files
 **36: **
 ```
 
