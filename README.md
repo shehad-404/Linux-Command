@@ -877,340 +877,336 @@ grep -v e word-list.txt | sort | uniq | wc -l
 
 ## Manipulating the Texts 
 ## sed = stream editor for filtering and transforming text >>>> Substitute or Delete the words
-**16: **
+**16: shows files content**
 ```
-
+cat sample.txt
 ```
-**17: **
+**17: s = substitute, "Suite" word Abrevation is = "Ste" in the file**
 ```
-
+sed 's/Suite/Ste/' sample.txt
 ```
-**18: **
+**18: Substitute only 1st Word "Suite" by "Ste" but not 2nd word "Suite"**
 ```
-
+echo Suite Suite | sed 's/Suite/Ste/'
 ```
-**19: **
+**19: Substitute both word("Suite") using Global var "g"**
 ```
-
+echo Suite Suite | sed 's/Suite/Ste/g'
 ```
-**20: **
+**20: Substitute only Last word "Suite"**
 ```
-
+sed '$s/Suite/Ste/' sample.txt
 ```
-**21: **
+**21: Deletes the entire line when it matches the word "Suite"**
 ```
-
+sed '/Suite/d' sample.txt
 ```
-**22: **
+**22: Search Pattern "Suite"**
 ```
-
+grep Suite sample.txt
 ```
-**23: **
+**23: word "Suite" Substitute by "Ste" when "ee" & "Suite" matches in the same Line**
 ```
-
+sed '/ee/ s/Suite/Ste/g' sample.txt	
 ```
-**24: **
+**24: Add a New Line("\n") at the end of Each Lines**
 ```
-
+sed 's/$/\n/g' sample.txt
 ```
-**25: **
+**25: Add a New Line("\n") at the end of Each Lines and when it finds a Comma(",")**
 ```
-
+sed 's/$/\n/g' sample.txt | sed 's/,/\n/g'
 ```
-**26: **
+**26: Add a New Line("\n") at the end of Each Lines and when it finds a Comma(",")(same as num 25 Command)**
 ```
-
+sed -e 's/$/\n/g' -e 's/,/\n/g' sample.txt
 ```
-**27: **
+### awk = pattern scanning and processing language
+**27: print the value 2 number word "Shehad" [$1 = Linux; $2 = Shehad; $3 = Sally] likes an Array**
 ```
-
+echo Linux Shehad Sally | awk '{print $2}'
 ```
-**28: **
+**28: it'll print "Sally likes Shehad"**
 ```
-
+exho Linux Shehad Sally | awk '{print $3, "likes", $2}'
 ```
-**29: **
+**29: print the words(Name) before it finds first("$1") Comma(",") in each lines**
 ```
-
+awk -F ',' '{print $1}' sample.txt	
 ```
-**30: **
+**30: print 2nd Name then Comma(",") then 1st Name**
 ```
-
+awk -F ',' '{print $1}' sample.txt | awk '{print $2, ", ", $1}'
 ```
-**31: **
+**31: print the Name("$1") only the lines have word "Dakota"**
 ```
-
+awk -F ',' '/Dakota/ {print $1}' sample.txt	
 ```
-**32: **
+**32: print the Name("$1") with the Num("NR") of Lines having word "Dakota"**
 ```
-
+awk -F ',' '/Dakota/ {print NR,$1}' sample.txt
 ```
-**33: **
+### tr = Translate or Delete characters
+**33: All the Commas(",") Transformed/Translate by a Tab("\t")**
 ```
-
+cat sample.txt | tr ',' '\t' 
 ```
-**34: **
+**34: All the LowerCase Letter("a-z") Transformed by UpperCase Letter("A-Z")**
 ```
-
+cat sample.txt | tr 'a-z' 'A-Z'
 ```
-**35: **
+**35: All the LowerCase Letter("a-z") Transformed by UpperCase Letter("A-Z") using set [same as Command 34]**
 ```
-
+cat sample.txt | tr '[:lower:]' '[:upper:]'
 ```
 ## Converting Text Files
-**36: **
+**36: Identifies the type of "*."txt files and shows whether they are using DOS, Unix, or MacOS line termination**
 ```
-
+file *.txt
 ```
-**37: **
+**37: vim Editor for  seeing the files >>> Opens sample-dos-file.txt in the vim text editor to view or edit the file.**
 ```
-
+vim sample-dos-file.txt
 ```
-**38: **
+**38: vim Editor for MacOS seeing the files**
 ```
-
+vim sample-macos-file.txt
 ```
-**39: **
+**39: Copies sample-unix-file.txt to a new file named temp.txt.**
 ```
-
+cp sample-unix-file.txt temp.txt
 ```
-**40: **
+**40: Converts the temp.txt file from Unix line endings (LF) to DOS format (CRLF).**
 ```
-
+unix2dos temp.txt
 ```
-**41: **
+**41: Checks the file type and confirms that temp.txt is now in DOS format.**
 ```
-
+file temp.txt
 ```
-**42: **
+**42: Deletes the temp.txt file.**
 ```
-
+rm temp.txt	
 ```
-**43: **
+**43: Converts sample-unix-file.txt to DOS format and saves it as temp.txt, without modifying the original file.**
 ```
-
+unix2dos -n sample-unix-file.txt temp.txt
 ```
-**44: **
+**44: Confirms that temp.txt is now in DOS format.**
 ```
-
+ file temp.txt
 ```
-**45: **
+**45: Copies sample-unix-file.txt to temp.txt.**
 ```
-
+cp sample-unix-file.txt temp.txt
 ```
-**46: **
+**46: Verifies the format of temp.txt.**
 ```
-
+file temp.txt
 ```
-**47: **
+**47: Converts temp.txt to MacOS format (CR line endings).**
 ```
-
+unix2dos -c mac temp.txt
 ```
-**48: **
+**48: Confirms that temp.txt is now in MacOS format.**
 ```
-
+file temp.txt
 ```
-**49: **
+**49: Deletes the temp.txt file.**
 ```
-
+rm temp.txt
 ```
-**50: **
+**50: Copies sample-dos-file.txt to temp.txt.**
 ```
-
+cp sample-dos-file.txt temp.txt
 ```
-**51: **
+**51: Converts temp.txt from DOS line endings to Unix line endings.**
 ```
-
+dos2unix temp.txt
 ```
-**52: **
+**52: Verifies that temp.txt is now in Unix format.**
 ```
-
+file temp.txt
 ```
-**53: **
+**53: Deletes temp.txt.**
 ```
-
+rm temp.txt	
 ```
-
+**54: Copies sample-macos-file.txt to temp.txt.**
+```
+cp sample-macos-file.txt temp.txt
+```
+**55: Converts temp.txt from MacOS format (CR line endings) to Unix format.**
+```
+dos2unix -c mac temp.txt
+```
 
 
 # H) More Utilities (Networking + File Transfer)
-**1: **
+## Networking
+### ping = send ICMP ECHO_REQUEST to network hosts
+**1: Sends ICMP echo requests to google.com to check connectivity and measure response times.**
+```
+ping google.com
+```
+**2: Sends exactly 3 ICMP echo requests to google.com and then stops.**
+```
+ping -c 3 google.com
+```
+**3: Displays the network configuration, including IP addresses, netmasks, and hardware addresses.**
+```
+ifconfig
+```
+**4: Shows detailed information about all network interfaces and their IP configurations.**
+```
+ip address
+```
+**5: Displays detailed statistics (like packet counts) for network links.**
+```
+ip -s link	
+```
+**6: Displays help information for the ip command, listing available options and subcommands.**
+```
+ip help
+```
+**7: Shows help specific to the ip address command, detailing how to manage IP addresses.**
+```
+ip address help
+```
+**8: Displays help for the ip link command, which manages network interfaces.**
+```
+ip link help
+```
+**9: Shows the current IP addresses for all network interfaces.**
+```
+ip address	
+```
+**10: Disables the network interface enp0s3 (requires superuser privileges).**
+```
+sudo ip link set dev enp0s3 down
+```
+**11: Shows the network interfaces again, but enp0s3 should now be down (inactive).**
+```
+ip address
+```
+**12: Attempts to ping google.com again, which should fail if the network interface is down.**
+```
+ping google.com
+```
+**13: Re-enables the enp0s3 network interface.**
+```
+sudo ip link set dev enp0s3 up
+```
+**14: Displays the network interfaces again, and enp0s3 should be up (active).**
+```
+ip address
+```
+**15: Tests connectivity by sending ICMP echo requests to google.com after re-enabling the interface.**
+```
+ping google.com
+```
+**16: Displays the routing table, which shows how network traffic is routed on the system.**
+```
+ip route	
+```
+**17: Adds a static route for the 10.0.3.0/24 network, directing traffic through the gateway at 10.0.2.1.**
+```
+sudo ip route add 10.0.3.0/24 via 10.0.2.1
+```
+**18: Displays the updated routing table, showing the new route added.**
+```
+ip route
+```
+**19: Deletes the previously added static route to the 10.0.3.0/24 network.**
+```
+sudo ip route delete 10.0.3.0/24 via 10.0.2.1
+```
+**20: Shows the routing table after the route has been deleted.**
+```
+ip route
+```
+## Finding DNS(Domain Name System)
+**21: Queries the DNS to find the IP address of google.com.**
+```
+nslookup google.com
+```
+**22: Performs a DNS lookup for google.com, providing more detailed information than nslookup.**
+```
+dig google.com
+```
+**23: Performs a reverse DNS lookup on Google's public DNS server IP (8.8.8.8) to find the associated domain name & it'll show the Domain Name**
+```
+dig -x 8.8.8.8
+```
+**24: Shows Current Connection(TCP) & Statistics("at")**
+```
+netstat -at
+```
+**25: Shows the coonection(TCP) currently Listening("lt")**
+```
+netstat -lt 
 ```
 
+## File Transfer Utilities >>>> scp = copies files between hosts on a network
+**26: file Transfer Local to Remote Machine(192.168.....) with given ip address**
 ```
-**2: **
+scp file.txt 192.168.100.4:/home/bob
 ```
-
+**27: r = copy a Directory, to given destination**
 ```
-**3: **
+scp -r files 192.168.100.4:/home/bob
 ```
-
+**28: send file Remote to Local [Remote file = 192.168......... ; Local dir = backup/]**
 ```
-**4: **
+scp 192.168.100.4:/home/bob/remote-file.txt  backup/
 ```
-
+**29: shows the list of files in Directory("backup")**
 ```
-**5: **
+ls backup 
 ```
-
+**30: print the content**
 ```
-**6: **
+cat backup/remote-file.txt
 ```
-
+**31: Copy a Directory Remote Machine to Local**
 ```
-**7: **
+scp -r 192.168.100.4:/home/bob/remote-file.txt  backup/
 ```
-
+**32: shows the Long List of "backup" dir**
 ```
-**8: **
+ll backup/	
 ```
-
+**33: shows the List of Files	in Directory "remote-files"**
 ```
-**9: **
+ll backup/remote-files/
 ```
-
+**34: send File from Local to Another Remote User("Sally")**
 ```
-**10: **
+scp file.txt sally@192.168.100.4:/home/sally
 ```
-
+### rsync = a fast, versatile, remote (and local) file-copying tool
+**35: Recursively send files using Archive[avzh; a=archive mode,v= ,z=transfer,h=human redable]**
 ```
-**11: **
-```
-
-```
-**12: **
-```
-
-```
-**13: **
+rsync -avzh file2.txt 192.168.100.4:/home/bob
 ```
 
-```
-**14: **
-```
-
-```
-**15: **
-```
-
-```
-**16: **
-```
-
-```
-**17: **
-```
-
-```
-**18: **
-```
-
-```
-**19: **
-```
-
-```
-**20: **
-```
-
-```
-**21: **
-```
-
-```
-**22: **
-```
-
-```
-**23: **
-```
-
-```
-**24: **
-```
-
-```
-**25: **
-```
-
-```
-**26: **
-```
-
-```
-**27: **
-```
-
-```
-**28: **
-```
-
-```
-**29: **
-```
-
-```
-**30: **
-```
-
-```
-**31: **
-```
-
-```
-**32: **
-```
-
-```
-**33: **
-```
-
-```
-**34: **
-```
-
-```
-**35: **
-```
-
-```
-**36: **
-```
-
-```
-**37: **
-```
-
-```
-**38: **
-```
-
-```
-**39: **
-```
-
-```
-**40: **
-```
-
-```
 
 
 
 # I) File Editors 
-
-**1: **
+## File or Text Editors: nano >>>> Simplest Text Editors >>>> Default txt editors in Linux Mint
+**1: File opens in nano Text Editor**
+```
+nano example.txt
+```
+## Text Editors: vim >>>> is a Modal Editor >>>> has 3 Modes(Default Mode, Input & Command Mode)
+**2: File opens in vim Text Editor**
+```
+vim example.txt
 ```
 
-```
-**2: **
-```
 
-```
-**3: **
-```
 
-```
 
 # J) Process Management 
 
