@@ -1498,7 +1498,7 @@ chmod +x file-name.sh
 ```
 
 ## Bash Scripting Control Structure >>>> Write the Code in Correct Format( it Gives an Issue, so I can't did that) 
-### if-else code [here] ()
+### if-else code [here](https://github.com/shehad-404/Linux-Command/blob/main/Scripts/if-examples.sh)
 **14:  Create the file and Edit the File**
 ```
 touch if-examples.sh
@@ -1507,7 +1507,7 @@ touch if-examples.sh
 ```
 bash if-examples.sh	
 ```
-### Comparison-Examples code [here] ()
+### Comparison-Examples code [here](https://github.com/shehad-404/Linux-Command/blob/main/Scripts/comparison-examples.sh)
 **16: Create the file and edit**
 ```
 touch comparison-examples.sh
@@ -1517,7 +1517,7 @@ touch comparison-examples.sh
 bash comparison-examples.sh
 ```
 
-### Case-Examples code [here] ()
+### Case-Examples code [here](https://github.com/shehad-404/Linux-Command/blob/main/Scripts/case-examples.sh)
 **18: Create the file**
 ```
 touch case-examples.sh
@@ -1527,7 +1527,7 @@ touch case-examples.sh
 bash case-examples.sh
 ```
 
-### Loops code [here] ()
+### Loop code [here](https://github.com/shehad-404/Linux-Command/blob/main/Scripts/loop.sh)
 **20:  Create the file**
 ```
 touch loop-examples.sh
