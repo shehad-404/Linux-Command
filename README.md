@@ -1287,10 +1287,10 @@ kill -l
 ```
 ### Some Important Signals:
 **Signal Number, Name  : 	Task**
-* 1)     SIGHUP	  =	Kill a Process;		
-* 19)    SIGSTOP	  = 	Stop the Process;	
-* 15)    SIGTERM	  = 	Default signal, if Process doesn't used then it ShutDown Automatically;
-* 9)     SIGKILL 	  = 	If Process Dosn't Respond then SIGKILL used to ShutDoen itself.
+* (1)     SIGHUP	  =	Kill a Process;		
+* (19)    SIGSTOP	  = 	Stop the Process;	
+* (15)    SIGTERM	  = 	Default signal, if Process doesn't used then it ShutDown Automatically;
+* (9)     SIGKILL 	  = 	If Process Dosn't Respond then SIGKILL used to ShutDoen itself.
 
 **18: It'll show PID(Process id like 55092)**
 ```
