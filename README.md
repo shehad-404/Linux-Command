@@ -15,4 +15,4 @@
 
 # About Linux Command
 
-**Linux commands are used to perform a variety of tasks, including displaying information about files and directories. Linux operating system is used on servers, desktops, and maybe even your smartphone. It has a lot of command line tools that can be used for virtually everything on the system.**
+Linux commands are used to perform a variety of tasks, including displaying information about files and directories. Linux operating system is used on servers, desktops, and maybe even your smartphone. It has a lot of command line tools that can be used for virtually everything on the system.
