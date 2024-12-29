@@ -1209,352 +1209,330 @@ vim example.txt
 
 
 # J) Process Management 
-
-**1: **
+## Process Information
+### ps = report a snapshot of the current processes 
+### ps accepts several options (UNIX options, BSD options, GNU long options)
+**1: Display all Process of BSD Syntax**
+```
+ps ax | less -S
+```
+**2: Display all Process using UNIX Format**
+```
+ps -e | less -S
+```
+**3: Most Common option for in BSD**
+```
+ps aux | less -S
+```
+**4: Most Common option for in UNIX**
+```
+ps -ef | less -S
+```
+**5: Shows every Process Running as "root"**
+```
+ps -U root -u root u | less -S
+```
+**6: View of Processes in Hierarchically**
+```
+ps -eH | less -S
+```
+**7: Display Processes in Hierarchy(Don't show PID, PPID,...... such as information)**
+```
+pstree | less -S
+```
+**8: Shows Most Consuming Processes**
+```
+top
 ```
 
+## Foreground & Background Process
+**9: follows the Movement of Mouse for Foreground Process (Can't execute the Command Unitil it removed)**
 ```
-**2: **
+xeyes
 ```
-
+**10: Can Execute the Command in Background**
 ```
-**3: **
+xeyes &
 ```
-
+**11: Stop the Process**
 ```
-**4: **
+ctrl + G 
 ```
-
+**12: Run Background Process again**
 ```
-**5: **
+bg 
 ```
-
+**13: Shows process wheather Runs or Not**
 ```
-**6: **
+jobs 
 ```
-
+**14: Starts the Foreground Process**
 ```
-**7: **
+fg
 ```
-
+**15: Runs a Clock for Process**
 ```
-**8: **
+xclock &
 ```
-
+**16: Foreground can Runs Specific Process**
 ```
-**9: **
-```
-
-```
-**10: **
+fg 3
 ```
 
+## Managing Process
+### kill = send a signal to a process
+**17: List of all Signals**
 ```
-**11: **
+kill -l
+```
+### Some Important Signals:
+**Signal Number, Name  : 	Task**
+-1)     SIGHUP	  =	Kill a Process;		
+-19)    SIGSTOP	  = 	Stop the Process;	
+-15)    SIGTERM	  = 	Default signal, if Process doesn't used then it ShutDown Automatically;
+-9)     SIGKILL 	  = 	If Process Dosn't Respond then SIGKILL used to ShutDoen itself.
+
+**18: It'll show PID(Process id like 55092)**
+```
+xeyes &
+```
+**19: Shows Process Id(PID)**
+```
+ps -ef | grep xeyes	
+```
+**20: It'll Kill the Process (55902 process)	[It's a Default command for Killing the Process]**
+```
+kill 55902	
+```
+**21: It'll show Process again**
+```
+xeyes &
+```
+**22: Re-run the Process (let a process id is = 55095)**
+```
+ps -ef | grep xeyes	
+```
+**23: Kill the process(PID= 55095) using Signal Num 9) SIGKILL**
+```
+kill -9 55095
+```
+**24: All Process will be dead if used "pkill"**
+```
+pkill xeyes
+```
+**25: It'll Sleep the Process for 5 Seconds**
+```
+sleep 5
 ```
 
+## Scheduling Processes with Crontab and Init.d
+### Processes can Executed by Scheduled with Specific Time by Using "crontab" 
+### 2 Types of "crontab" in Linux 
+### 1st is System-wide crontab file located in /etc Directory 
+**26: shows "crontab" file in /etc Directory**
 ```
-**12: **
+less /etc/crontab
 ```
-
+#### "anacorn" is a Acroministic version of "corn" >>> daily, weekly & monthly
+**27: shows the list of daily cron file**
 ```
-**13: **
+ll /etc/cron.daily
 ```
-
+**28: it'll open crontan in a Editor(nano, vim or ......)**
 ```
-**14: **
+crontab -e
 ```
-
+**29: Giving the Schedule(*/5 * ....) then save the file (using ctrl+O) and exit (ctrl+X)**
 ```
-**15: **
+*/5 * * * * touch /home/shehad/cron/crontab-ran.txt
 ```
-
+**30: shows the list of "crontab"**
 ```
-**16: **
+crontab -l
 ```
-
+**31: it'll try to open the File**
 ```
-**17: **
+ls -l /home/shehad/cron/crontab-ran.txt
 ```
-
+**32: it'll try to open the Directory**
 ```
-**18: **
+ls -l /home/shehad/cron/	
 ```
-
+**33: Run again the Command(31) then the File can be exist now**
 ```
-**19: **
+ls -l /home/shehad/cron/crontab-ran.txt 
 ```
-
+**34: Remove the "crontab"**
 ```
-**20: **
+crontab -r
 ```
-
+**35: there is no List of Crontab**
 ```
-**21: **
-```
-
-```
-**22: **
-```
-
-```
-**23: **
+crontab -l 
 ```
 
+## System Boots [Graphical or GUI related] 
+**36: it'll Open System Boots**
 ```
-**24: **
+cd /etc/init.d
 ```
-
+**37: show the list**
 ```
-**25: **
+ls	
 ```
-
+**38: Back to Current Directory("/etc")**
 ```
-**26: **
+cd ..
 ```
-
+**39: it'll show the List of Directory**
 ```
-**27: **
+ls -d /etc/rc*.d
 ```
-
+**40:  Enter into Run Level "rc5.d"**
 ```
-**28: **
+cd rc5.d
 ```
-
+**41:  shows the list Run Level of "rc5.d"**
 ```
-**29: **
-```
-
-```
-**30: **
-```
-
-```
-**31: **
-```
-
-```
-**32: **
-```
-
-```
-**33: **
-```
-
-```
-**34: **
-```
-
-```
-**35: **
-```
-
-```
-**36: **
-```
-
-```
-**37: **
-```
-
-```
-**38: **
-```
-
-```
-**39: **
-```
-
-```
-**40: **
-```
-
+ls -l
 ```
 
 # K) Regular Expression 
-**1: **
+## Regular Expression = has ability to find Complex Pattern Matching 
+## Uses in = Search Engine, Programming Languages, Text Processing Applications
+
+#### Searching with Regular Expressions
+**1: The File contains some Numbers**
+```
+cat numbers.txt
+```
+#### we need to findout the Numbers Greater or  than equal to 42 (>=42)
+**2: \d = any Digit from 0 to 9**
+```
+'^4[2-9] | [5-9]\d | \d{3,}$'
 ```
 
+#### Finding Numbers =>42 for Regular Expression in Linux:
+**3: \d replaced by [0-9]**
 ```
-**2: **
+grep -E '^4[2-9]|[5-9][0-9]|[0-9]{3,}$' numbers.txt
 ```
-
+**4: same as Command num (2) ([[:digit:]] = [0-9])**
 ```
-**3: **
-```
-
-```
-**4: **
+grep -E '^4[2-9]|[5-9][[:digit:]]|[[:digit:]]{3,}$' numbers.txt
 ```
 
-```
-**5: **
-```
-
-```
 
 
 
 
 # L) Shell Scripting 
+## Bash Scripting Basics:
+### Scripting in WSL, VMware or VirtualBox 
+### Has 3 Steps 
+### 1st) Create a File(*.sh) 
+### 2nd) Edit File in Editor(Notepad, vim, nano or others)
+### 3rd) Run the Script using "bash" Command
 
-**1: **
+## Script in "Notepad"
+**1: "touch" Command Create a file with ".sh" Extemtion**
 ```
-
+touch file_name.sh
 ```
-**2: **
+**Edit File >>> open the file in Notepad and Write the Script or use other Editors(vim, nano,...)**
+**Run the Script**
+**2: it'll run the Script and display the Result**
 ```
-
-```
-**3: **
-```
-
-```
-**4: **
-```
-
-```
-**5: **
-```
-
-```
-**6: **
+bash file_name.sh	
 ```
 
+## Another Way: Script in "vim" Editor
+**3: Create a file and Open in "vim" Editor [Use "nano" for nano Editor]**
 ```
-**7: **
+gvim file_name.sh &
 ```
-
+**4: Run the Script**
 ```
-**8: **
+bash file_name.sh
 ```
-
+**5: Shows the file information**
 ```
-**9: **
+ls -l file_name.sh
 ```
-
+**6: Change file Permission(chmod) for Executable("+x")**
 ```
-**10: **
+chmod +x file-name.sh
 ```
-
+**7: Executes the Code and Display the Output**
 ```
-**11: **
-```
-
-```
-**12: **
+./file_name.sh
 ```
 
+
+## Another Way: Script in "nano" Editor
+**8: Create a file and Open in "Nano" Editor**
 ```
-**13: **
+nano file_name.sh
+```
+**9: Change file Permission(chmod) for Executable("+x")**
+```
+chmod +x file-name.sh
+```
+**10: Executes the Code and Display the Output**
+```
+./file_name.sh
 ```
 
+## Another Way: Script in "Emacs" Editor
+**11:  Creating file for using the "Emacs" text editor**
 ```
-**14: **
+emacs -nw hello.sh
 ```
-
+**12: Change file Permission(chmod) for Executable("+x")**
 ```
-**15: **
+chmod +x file-name.sh
 ```
-
+**13: Executes the Code and Display the Output**
 ```
-**16: **
-```
-
-```
-**17: **
+./file_name.sh
 ```
 
+## Bash Scripting Control Structure >>>> Write the Code in Correct Format( it Gives an Issue, so I can't did that) 
+### if-else code [here] ()
+**14:  Create the file and Edit the File**
 ```
-**18: **
+touch if-examples.sh
 ```
-
+**15:  Run the file**
 ```
-**19: **
+bash if-examples.sh	
 ```
-
+### Comparison-Examples code [here] ()
+**16: Create the file and edit**
 ```
-**20: **
+touch comparison-examples.sh
 ```
-
+**17:  Run the File**
 ```
-**21: **
-```
-
-```
-**22: **
-```
-
-```
-**23: **
+bash comparison-examples.sh
 ```
 
+### Case-Examples code [here] ()
+**18: Create the file**
 ```
-**24: **
+touch case-examples.sh
 ```
-
+**19: Run the File**
 ```
-**25: **
-```
-
-```
-**26: **
+bash case-examples.sh
 ```
 
+### Loops code [here] ()
+**20:  Create the file**
 ```
-**27: **
+touch loop-examples.sh
 ```
-
+**21: Run the File**
 ```
-**28: **
-```
-
-```
-**29: **
-```
-
-```
-**30: **
-```
-
-```
-**31: **
-```
-
-```
-**32: **
-```
-
-```
-**33: **
-```
-
-```
-**34: **
-```
-
-```
-**35: **
-```
-
-```
-**36: **
-```
-
-```
-**37: **
-```
-
-```
-**38: **
-```
-
-```
-**39: **
-```
-
-```
-**40: **
-```
-
+bash loop-examples.sh
 ```
