@@ -16,3 +16,6 @@
 # About Linux Command
 
 Linux commands are used to perform a variety of tasks, including displaying information about files and directories. Linux operating system is used on servers, desktops, and maybe even your smartphone. It has a lot of command line tools that can be used for virtually everything on the system.
+
+# How to Run Linux Command?
+Linux commands can be run using WSL, VMware/VirtualBox or Dual Boot Systems. This system should be installed on PC properly.
